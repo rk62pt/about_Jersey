@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Archetype Created Web Application</display-name>
+  <filter> <!--注意這裡是filter，不要配置成servlet-->
+
+<filter-name>CharactorFilter</filter-name> <!--過濾器名稱-->
+
+<filter-class>tw.com.rk62pt.jersey.filter.CharactorFilter</filter-class> <!--過濾器的完整類名--> 
+
+<init-param> <!--初始化參數--> 
+
+<param-name>encoding</param-name> <!--參數名稱--> 
+
+<param-value>utf-8</param-value> <!--參數值--> 
+
+</init-param>
+
+</filter>
+
+<filter-mapping> <!--過濾器映射-->
+
+<filter-name>CharactorFilter</filter-name><!--過濾器名稱--> 
+
+<url-pattern>/*</url-pattern><!--URL映射，給所有頁面處理亂碼--> 
+
+</filter-mapping>
+</web-app>
