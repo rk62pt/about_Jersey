@@ -33,6 +33,7 @@ public class ShowApiController {
 		return voList;
 	}
 	
+	//過濾展演資料 城市名稱
 	@GET
     @Path("/{name}")
     public List<ShowVO> sayHello(@PathParam("name") String name) {
